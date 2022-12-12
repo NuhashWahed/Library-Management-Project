@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    
+</head>
+<body >
+    <nav class="navbar bg-success">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1">Library Management System</span>
+          <span><a href = "{% url 'issueshow'  %}">Issue Book</a></span>
+          <a href = "{% url 'showuser'  %}">SHOW THE USERS</a>
+          <a href = "{% url 'show'  %}">Available Book</a>
+          <a href = "{% url 'logout'  %}">LogOut</a>
+        </div>
+      </nav>
+    <center>
+    <h1 style="color: blue;">Add a new Book</h1>
+    <br>
+    <form id="form-container" method="POST">
+        <input type="hidden" name="csrfmiddlewaretoken" value="T7z2VNWSYlzk98MzEc0cgo9sPiycrw0zfzPkJ1hU1g3bC5EMjXOmZvW9enUxXs4c">
+       
+        <div class="book-form">
+        <p>
+    <label for="id_issn" style="color: orange;"><h6>Issn:</h6></label>
+    <input type="text" name="issn" maxlength="20" required id="id_issn">
+  </p>
+  <p>
+    <label for="id_bname" style="color: orange;"><h6>Bname:</h6></label>
+    <input type="text" name="bname" maxlength="100" required id="id_bname">
+  </p>
+  <p>
+    <label for="id_bwritter" style="color: orange;"><h6>Bwritter:</h6></label>
+    <input type="text" name="bwritter" maxlength="15" required id="id_bwritter"> 
+  </p>
+        </div>
+        <button type="submit" class="btn btn-success btn-lg">Create Book</button>
+    </form>
+</center>
+
+    
+
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+       
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>
